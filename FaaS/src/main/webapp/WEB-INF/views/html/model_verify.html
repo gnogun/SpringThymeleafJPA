@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<!-- 
+<title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
+ -->
+<title>FaaS - Project</title>
+<meta name="keywords"
+	content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+<meta name="description"
+	content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+<meta name="author" content="AdminDesigns">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Iconsweets CSS(font) -->
+<link rel="stylesheet" type="text/css"
+	href="../theme/assets/fonts/iconsweets/iconsweets.css">
+
+<!-- Font CSS (Via CDN) -->
+<link rel='stylesheet' type='text/css'
+	href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+<!-- Theme CSS -->
+<link rel="stylesheet" type="text/css"
+	href="../theme/assets/skin/default_skin/css/theme.css">
+
+<!-- Admin Forms CSS -->
+<link rel="stylesheet" type="text/css"
+	href="../theme/assets/admin-tools/admin-forms/css/admin-forms.css">
+
+<!-- Datatables CSS -->
+<link rel="stylesheet" type="text/css"
+	href="../theme/vendor/plugins/datatables/media/css/dataTables.bootstrap.css">
+
+<!-- Datatables Addons CSS -->
+<link rel="stylesheet" type="text/css"
+	href="../theme/vendor/plugins/datatables/media/css/dataTables.plugins.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../theme/assets/img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body class="model-verify boxed-layout sb-top sb-top-collapsed">
+
+	<!-- Start: Main -->
+	<div id="main">
+
+		<!-- Start: Header -->
+		<header class="navbar navbar-static-top navbar-shadow">
+			<div class="navbar-branding">
+				<a class="navbar-brand" href="dashboard.html"> <!-- 
+				<b>Admin</b>Designs
+				 --> <b>FaaS</b>
+				</a>
+			</div>
+			<ul class="nav navbar-nav navbar-left">
+				<li><a class="topbar-menu-toggle" href="#"> <span
+						class="ad ad-wand fs16"></span>
+				</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#"> <span
+						class="ad ad-radio-tower fs18"></span>
+				</a>
+					<ul
+						class="dropdown-menu media-list w350 animated animated-shorter fadeIn"
+						role="menu">
+						<li class="dropdown-header"><span class="dropdown-title">
+								알림</span> <span class="label label-warning">12</span></li>
+						<li class="media"><a class="media-left" href="#"> <img
+								src="../theme/assets/img/avatars/5.jpg" class="mw40"
+								alt="avatar">
+						</a>
+							<div class="media-body">
+								<h5 class="media-heading">
+									Article <small class="text-muted">- 08/16/22</small>
+								</h5>
+								마지막 업데이트 1시간전 -  <a class="text-system" href="#">
+									하창수 </a>
+							</div></li>
+						<li class="media"><a class="media-left" href="#"> <img
+								src="../theme/assets/img/avatars/2.jpg" class="mw40"
+								alt="avatar">
+						</a>
+							<div class="media-body">
+								<h5 class="media-heading mv5">
+									Article <small> - 08/16/22</small>
+								</h5>
+								마지막 업데이트 1시간전 -  <a class="text-system" href="#">
+									하창수 </a>
+							</div></li>
+						<li class="media"><a class="media-left" href="#"> <img
+								src="../theme/assets/img/avatars/3.jpg" class="mw40"
+								alt="avatar">
+						</a>
+							<div class="media-body">
+								<h5 class="media-heading">
+									Article <small class="text-muted">- 08/16/22</small>
+								</h5>
+								마지막 업데이트 1시간전 -  <a class="text-system" href="#">
+									하창수 </a>
+							</div></li>
+						<li class="media"><a class="media-left" href="#"> <img
+								src="../theme/assets/img/avatars/4.jpg" class="mw40"
+								alt="avatar">
+						</a>
+							<div class="media-body">
+								<h5 class="media-heading mv5">
+									Article <small class="text-muted">- 08/16/22</small>
+								</h5>
+								마지막 업데이트 1시간전 -  <a class="text-system" href="#">
+									하창수 </a>
+							</div></li>
+					</ul></li>
+
+				<li class="menu-divider hidden-xs"><i class="fa fa-circle"></i>
+				</li>
+				<li class="dropdown"><a href="#"
+					class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img
+						src="../theme/assets/img/avatars/1.jpg" alt="avatar"
+						class="mw30 br64 mr15"> 하창수 <span
+						class="caret caret-tp hidden-xs"></span>
+				</a>
+					<ul class="dropdown-menu list-group dropdown-persist w250"
+						role="menu">
+						<li class="dropdown-header clearfix">
+							<div class="pull-left ml10">
+								<select id="user-status">
+									<optgroup label="현재 상태:">
+										<option value="1-1">자리비움</option>
+										<option value="1-2">오프라인</option>
+										<option value="1-3" selected="selected">접속중</option>
+									</optgroup>
+								</select>
+							</div>
+
+							<div class="pull-right mr10">
+								<select id="user-role">
+									<optgroup label="로그인 옵션:">
+										<option value="1-1">고객</option>
+										<option value="1-2">편집자</option>
+										<option value="1-3" selected="selected">관리자</option>
+									</optgroup>
+								</select>
+							</div>
+
+						</li>
+						<li class="list-group-item"><a href="#"
+							class="animated animated-short fadeInUp"> <span
+								class="fa fa-envelope"></span> 메세지 <span
+								class="label label-warning">2</span>
+						</a></li>
+						<li class="list-group-item"><a href="#"
+							class="animated animated-short fadeInUp"> <span
+								class="fa fa-user"></span> 친구 <span
+								class="label label-warning">6</span>
+						</a></li>
+						<li class="list-group-item"><a href="#"
+							class="animated animated-short fadeInUp"> <span
+								class="fa fa-gear"></span> 계정 관리
+						</a></li>
+						<li class="list-group-item"><a href="login.html"
+							class="animated animated-short fadeInUp"> <span
+								class="fa fa-power-off"></span> 로그아웃
+						</a></li>
+					</ul></li>
+
+			</ul>
+
+		</header>
+		<!-- End: Header -->
+
+		<!-- Start: Sidebar -->
+		<aside id="sidebar_left" class="">
+
+
+
+
+			<!-- Start: Sidebar Left Content -->
+			<div class="sidebar-left-content nano-content">
+
+				<!-- Start: Sidebar Menu -->
+
+				<!-- End: Sidebar Menu -->
+
+			</div>
+			<!-- End: Sidebar Left Content -->
+
+		</aside>
+
+		<!-- Start: Content-Wrapper -->
+		<section id="content_wrapper">
+
+			<!-- Start: Topbar-Dropdown -->
+			<div id="topbar-dropmenu">
+				<div class="topbar-menu row">
+					<div class="col-xs-4 col-sm-2">
+						<a href="dashboard.html" class="metro-tile"> <span
+							class="metro-icon glyphicon glyphicon-home"></span>
+							<p class="metro-title">대시보드</p>
+						</a>
+					</div>
+					<div class="col-xs-4 col-sm-2">
+						<a href="project_list.html" class="metro-tile"> <span
+							class="metro-icon glyphicon glyphicon-th-list"></span>
+							<p class="metro-title">프로젝트</p>
+						</a>
+					</div>
+					<div class="col-xs-4 col-sm-2">
+						<a href="model_verify.html" class="metro-tile"> <span
+							class="metro-icon glyphicon glyphicon-eye-open"></span>
+							<p class="metro-title">부품 검증</p>
+						</a>
+					</div>
+					<div class="col-xs-4 col-sm-2">
+						<a href="part_deliever.html" class="metro-tile"> <span
+							class="icon-truck"></span>
+							<p class="metro-title">부품 조달</p>
+						</a>
+					</div>
+					<div class="col-xs-4 col-sm-2">
+						<a href="product_info.html" class="metro-tile"> <span
+							class="metro-icon glyphicon glyphicon-wrench"></span>
+							<p class="metro-title">생산 현황</p>
+						</a>
+					</div>
+					<div class="col-xs-4 col-sm-2">
+						<a href="manage_order.html" class="metro-tile"> <span
+							class="metro-icon glyphicon glyphicon-shopping-cart"></span>
+							<p class="metro-title">제품/주문 관리</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- End: Topbar-Dropdown -->
+
+			<!-- Start: Topbar -->
+			<header id="topbar" class="hidden">
+				<div class="topbar-left">
+					<ol class="breadcrumb">
+						<li class="crumb-active"><a href="dashboard.html">Dashboard</a>
+						</li>
+						<li class="crumb-icon"><a href="dashboard.html"> <span
+								class="glyphicon glyphicon-home"></span>
+						</a></li>
+						<li class="crumb-link"><a href="dashboard.html">Home</a></li>
+						<li class="crumb-trail">Dashboard</li>
+					</ol>
+				</div>
+				<div class="topbar-right">
+					<div class="ib topbar-dropdown">
+						<label for="topbar-multiple"
+							class="control-label pr10 fs11 text-muted">Reporting
+							Period</label> <select id="topbar-multiple" class="hidden">
+							<optgroup label="Filter By:">
+								<option value="1-1">Last 30 Days</option>
+								<option value="1-2" selected="selected">Last 60 Days</option>
+								<option value="1-3">Last Year</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="ml15 ib va-m" id="toggle_sidemenu_r">
+						<a href="#" class="pl5"> <i
+							class="fa fa-sign-in fs22 text-primary"></i> <span
+							class="badge badge-hero badge-danger">3</span>
+						</a>
+					</div>
+				</div>
+			</header>
+			<!-- End: Topbar -->
+
+			<!-- Begin: Content -->
+			<section id="content" class="animated fadeIn">
+
+				<div class="row block-row mb10 mt10 pt20">
+
+					<div class="panel col-md-12">
+						<div class="panel-heading">
+							<span class="panel-title">부품 검증</span>
+						</div>
+						<div class="panel-body">
+
+																<div id="tab4" class="tab-pane">
+										<div class="panel-body">
+											<form class="form-horizontal" role="form">
+												<div class="form-group">
+													<div class="col-lg-12">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th>번호</th>
+																	<th>요청일자</th>
+																	<th>프로젝트이름</th>
+																	<th>이미지</th>
+																	<th>3D모델</th>
+																	<th>검증결과</th>
+																	<th>STL 다운로드</th>
+																	<th>삭제</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>2015.09.03</td>
+																	<td><a href="project_list.html"><b>LARVA 배터리충전팩 AAA형 - 실버</b></a></td>
+																	<td><img class="img-responsive mw140 ib mr10"
+																		title="model"
+																		src="../theme/assets/img/stock/products/larva_produce.jpg"
+																		style="width: 100px;"></td>
+																	<td>LARVA_ASSY_ASM_produce.3dxml</td>
+																	<td>X</td>
+																	<td><a href="../data/LARVA_ASSY_ASM_produce.stl">Download</a></td>
+																	<td><a href="#"><i
+																			class="glyphicon glyphicon-trash"></i></a></td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>2015.09.04</td>
+																	<td><a href="project_list.html"><b>LARVA 배터리충전팩 AAA형 - 실버</b></a></td>
+																	<td><img class="img-responsive mw140 ib mr10"
+																		title="model"
+																		src="../theme/assets/img/stock/products/larva_produce.jpg"
+																		style="width: 100px;"></td>
+																	<td>LARVA_ASSY_ASM_produce.3dxml</td>
+																	<td>O</td>
+																	<td><a href="../data/LARVA_ASSY_ASM_produce.stl">Download</a></td>
+																	<td><a href="#"><i
+																			class="glyphicon glyphicon-trash"></i></a></td>
+																</tr>																
+															</tbody>
+														</table>
+
+														<div class="buttonwrap col-xs-2">
+															<div class="bs-component">
+																<button type="button" class="btn btn-primary btn-block">검증요청 신규생성</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>		
+
+						</div>
+					</div>
+
+				</div>
+
+
+			</section>
+			<!-- End: Content -->
+
+
+
+		</section>
+
+
+
+
+	</div>
+	<!-- End: Main -->
+
+	<script src="../theme/vendor/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+	<!-- Page Plugins -->
+	<script
+		src="../theme/assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
+	<script
+		src="../theme/assets/admin-tools/admin-forms/js/jquery.steps.min.js"></script>
+
+	<!-- Datatables -->
+	<script
+		src="../theme/vendor/plugins/datatables/media/js/jquery.dataTables.js"></script>
+
+	<!-- Datatables Tabletools addon -->
+	<script
+		src="../theme/vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+
+	<!-- Datatables ColReorder addon -->
+	<script
+		src="../theme/vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+
+	<!-- Datatables Bootstrap Modifications  -->
+	<script
+		src="../theme/vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+
+	<!-- Theme Javascript -->
+	<script src="../theme/assets/js/utility/utility.js"></script>
+	<script src="../theme/assets/js/demo/demo.js"></script>
+	<script src="../theme/assets/js/main.js"></script>
+
+	<!-- END: PAGE SCRIPTS -->
+
+	<!-- start: custom js, css -->
+
+	<link rel="stylesheet" type="text/css" href="../custom/css/custom.css">
+	<script src="../custom/js/custom.js"></script>
+
+	<!-- end: custrom js, css -->
+
+</body>
+
+</html>

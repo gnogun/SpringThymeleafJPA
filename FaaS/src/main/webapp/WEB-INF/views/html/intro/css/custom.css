@@ -1,0 +1,142 @@
+#hero:before {
+	background: url(../../../custom/img/main-block.png) center no-repeat;
+	background-size: cover;
+}
+
+#services {
+	background: url(../../../custom/img/Product-designer.jpg) center
+		no-repeat;
+	background-size: cover;
+}
+
+#services .cover {
+	background-color: rgba(255, 255, 255, 0.85);
+}
+
+#features-flat {
+	padding: 0px;
+	background: url(../../../custom/img/image7.jpg) center
+		no-repeat;
+	background-size: cover;
+}
+
+#features-flat h2, #features-flat h3 {
+	color: #fff;
+}
+
+#features-flat .cover {
+	background-color: rgba(41, 176, 213, 0.85);
+}
+
+#portfolio {
+	background: url(../../../custom/img/waiting-in-line-1024x339.jpg) center
+		no-repeat;
+	background-size: cover;
+}
+
+#portfolio .cover {
+	background-color: rgba(250, 250, 250, 0.45);
+}
+
+#portfolio .container {
+	background-color: rgba(250, 250, 250, 1);
+}
+
+@media ( min-width : 768px) {
+	section {
+		padding: 0px 0;
+	}
+	
+	.cover {
+		padding: 70px 0;
+	}
+}
+
+section {
+	padding: 0px 0;
+	border-bottom: 1px solid #EEE;
+}
+
+.cover {
+	padding: 50px 0;
+	width: 100%;
+	height: 100%;
+}
+
+.fs45 {
+	font-size: 45px !important;
+}
+
+.bg-primary {
+	background-color: #4a89dc !important;
+	color: #f5f8fd;
+}
+
+.bg-light .text-muted {
+	color: #999;
+}
+
+.bg-primary .text-muted {
+	color: #c5dcfa;
+}
+
+.bg-info .text-muted {
+	color: #50A2E5;
+}
+
+.bg-success .text-muted {
+	color: #5CB85C;
+}
+
+.bg-light.dark {
+	background-color: #F2F2F2;
+}
+
+.bg-primary.light {
+	background-color: #649ae1 !important;
+}
+
+.bg-info.light {
+	background-color: #55badf !important;
+}
+
+.bg-success.light {
+	background-color: #85d27a !important;
+}
+
+.br64 {
+	border-radius: 64px !important;
+}
+
+#features-flat {
+	padding-bottom: 0px !important;
+}
+
+.faas-process-img {
+	margin-top: -20px;
+	width: 100%;
+	max-width: 1150px !important;
+}
+
+#portfolio {
+	min-height: 610px;
+}
+
+section#contact {
+	background: #D9EDF7;
+}
+
+.user-avatar {
+	width: 100%;
+}
+
+.slick-main img, .slick-main .caption {
+	max-width: 200px;
+	margin: auto;
+}
+
+section h3.section-subheading {
+	font-size: 28px;
+	font-style: normal;
+}
+
