@@ -1,9 +1,11 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page pageEncoding="utf-8" contentType="text/html; Charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 
 <head>
 <!-- Meta, title, CSS, favicons, etc. -->
-<meta charset="utf-8">
+
 <!-- 
 <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
  -->
@@ -21,24 +23,24 @@
 
 <!-- Admin Forms CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/admin-tools/admin-forms/css/admin-forms.css">
+	href="theme/assets/admin-tools/admin-forms/css/admin-forms.css">
 
 <!-- Iconsweets CSS(font) -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/fonts/iconsweets/iconsweets.css">
+	href="theme/assets/fonts/iconsweets/iconsweets.css">
 
 <!-- Glyphicons Pro CSS(font) -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/fonts/glyphicons-pro/glyphicons-pro.css">
+	href="theme/assets/fonts/glyphicons-pro/glyphicons-pro.css">
 
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/skin/default_skin/css/theme.css">
+	href="theme/assets/skin/default_skin/css/theme.css">
 
 
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="../theme/assets/img/favicon.ico">
+<link rel="shortcut icon" href="theme/assets/img/favicon.ico">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -47,36 +49,35 @@
 <![endif]-->
 
 <!-- jQuery -->
-<script src="../theme/vendor/jquery/jquery-1.11.1.min.js"></script>
-<script src="../theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+<script src="theme/vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
 
 <!-- HighCharts Plugin -->
-<script src="../theme/vendor/plugins/highcharts/highcharts.js"></script>
+<script src="theme/vendor/plugins/highcharts/highcharts.js"></script>
 
 <!-- Sparklines Plugin -->
-<script src="../theme/vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="theme/vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
 
 <!-- Simple Circles Plugin -->
-<script src="../theme/vendor/plugins/circles/circles.js"></script>
+<script src="theme/vendor/plugins/circles/circles.js"></script>
 
 <!-- JvectorMap Plugin + US Map (more maps in plugin/assets folder) -->
+<script src="theme/vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
 <script
-	src="../theme/vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-<script
-	src="../theme/vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script>
+	src="theme/vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script>
 
 <!-- Slick Slider Plugin -->
-<script src="../theme/vendor/plugins/slick/slick.js"></script>
+<script src="theme/vendor/plugins/slick/slick.js"></script>
 
 <!-- Slick.js CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/vendor/plugins/slick/slick.css">
+	href="theme/vendor/plugins/slick/slick.css">
 
 <!-- start: custom js, css -->
 
-<link rel="stylesheet" type="text/css" href="../custom/css/custom.css">
-<script src="../custom/js/custom.js"></script>
+<link rel="stylesheet" type="text/css" href="custom/css/custom.css">
+<script src="custom/js/custom.js"></script>
 
 <!-- end: custrom js, css -->
 </head>
@@ -121,8 +122,8 @@
 					</ul></li>
 
 				<li class="dropdown"><a type="button"
-					class="btn btn-xs btn btn-block login-button"><span class="fa fa-power-off"></span>
-						로그인</a></li>
+					class="btn btn-xs btn btn-block login-button"><span
+						class="fa fa-power-off"></span> 로그인</a></li>
 
 			</ul>
 
@@ -236,18 +237,18 @@
 					 -->
 					<div class="jumbo-slick2">
 						<div class="jumbotron pt10 pb10 pln prn">
-							<img src="../custom/img/111.png" class="block img-responsive">
+							<img src="custom/img/111.png" class="block img-responsive">
 							<!--style="max-width: 275px;">  -->
 
 						</div>
 						<!-- 
 						<div class="jumbotron">
 							<h2>만들고 싶은 걸 만드세요.</h2>
-							<img src="../custom/img/iron-man-blueprint-19341.jpg"
+							<img src="custom/img/iron-man-blueprint-19341.jpg"
 								class="mr20" style="max-height: 160px;"> <img
-								src="../custom/img/Huragon.jpg"
+								src="custom/img/Huragon.jpg"
 								class="" style="max-height: 160px;">
-								<img src="../custom/img/2222.png">
+								<img src="custom/img/2222.png">
 							<h3>당신을 도울 전문가들이 대기 중입니다.</h3>
 						</div>
 						 -->
@@ -267,19 +268,19 @@
 								<div class="slick-slide">
 									<h1>
 										<img class="img-responsive"
-											src="../theme/assets/img/stock/products/larva.jpg">
+											src="theme/assets/img/stock/products/larva.jpg">
 									</h1>
 								</div>
 								<div class="slick-slide">
 									<h1>
 										<img class="img-responsive" title="user"
-											src="../custom/img/Nuby-Rubber-Ducky-Speaker.jpg">
+											src="custom/img/Nuby-Rubber-Ducky-Speaker.jpg">
 									</h1>
 								</div>
 								<div class="slick-slide">
 									<h1>
 										<img class="img-responsive" title="user"
-											src="../custom/img/ZM-DS1000_b_06.jpg">
+											src="custom/img/ZM-DS1000_b_06.jpg">
 									</h1>
 								</div>
 								<div class="slick-slide">
@@ -304,7 +305,7 @@
 
 							<div class="row mt15">
 								<div class="col-md-2">
-									<img src="../theme/assets/img/avatars/1.jpg"
+									<img src="theme/assets/img/avatars/1.jpg"
 										class="user-avatar mw100">
 									<div class="caption">
 										<h5>
@@ -313,7 +314,7 @@
 									</div>
 								</div>
 								<div class="col-md-2">
-									<img src="../theme/assets/img/avatars/2.jpg"
+									<img src="theme/assets/img/avatars/2.jpg"
 										class="user-avatar mw100">
 									<div class="caption">
 										<h5>
@@ -322,7 +323,7 @@
 									</div>
 								</div>
 								<div class="col-md-2">
-									<img src="../theme/assets/img/avatars/3.jpg"
+									<img src="theme/assets/img/avatars/3.jpg"
 										class="user-avatar mw100">
 									<div class="caption">
 										<h5>
@@ -331,7 +332,7 @@
 									</div>
 								</div>
 								<div class="col-md-2">
-									<img src="../theme/assets/img/avatars/4.jpg"
+									<img src="theme/assets/img/avatars/4.jpg"
 										class="user-avatar mw100">
 									<div class="caption">
 										<h5>
@@ -340,7 +341,7 @@
 									</div>
 								</div>
 								<div class="col-md-2">
-									<img src="../theme/assets/img/avatars/5.jpg"
+									<img src="theme/assets/img/avatars/5.jpg"
 										class="user-avatar mw100">
 									<div class="caption">
 										<h5>
@@ -371,9 +372,9 @@
 
 
 	<!-- Theme Javascript -->
-	<script src="../theme/assets/js/utility/utility.js"></script>
-	<script src="../theme/assets/js/demo/demo.js"></script>
-	<script src="../theme/assets/js/main.js"></script>
+	<script src="theme/assets/js/utility/utility.js"></script>
+	<script src="theme/assets/js/demo/demo.js"></script>
+	<script src="theme/assets/js/main.js"></script>
 	<!-- END: PAGE SCRIPTS -->
 
 </body>
