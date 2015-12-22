@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context 
-		http://www.springframework.org/schema/context/spring-context-4.2.xsd
-		http://www.springframework.org/schema/data/jpa
-     	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
@@ -21,12 +19,9 @@
 		<property name="url" value="jdbc:mariadb://14.63.220.246:7749/latis_test"></property>
 	</bean>
 
-<!-- 
-	<jpa:repositories base-package="com.latis.faas.repository"
-		entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>
- -->
- 
- <jpa:repositories base-package="com.latis.faas.repositoryex"
+	<!-- <jpa:repositories base-package="com.latis.faas.repository" entity-manager-factory-ref="entityManagerFactory"></jpa:repositories> -->
+
+	<jpa:repositories base-package="com.latis.faas.repositoryex"
 		entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>
 
 
@@ -38,19 +33,17 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="jpaProperties">
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop> 
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 				<prop key="hibernate.connection.pool_size">1</prop>
-				<prop key="hibernate.connection.shutdown">true</prop> 
-				<prop key="hibernate.show_sql">true</prop> <!-- SQL 출력 -->		
+				<prop key="hibernate.connection.shutdown">true</prop>
+				<prop key="hibernate.show_sql">true</prop> <!-- SQL 출력 -->
 				<prop key="hibernate.ddl_auto">auto</prop>
 				<prop key="hibernate.hbm2ddl.auto">create</prop> <!-- 테이블 자동 생성 -->
 			</props>
 		</property>
 		<!-- 엔티티 정의된 클래스들이 있는 패키지 등록 -->
-		<!-- 
-		<property name="packagesToScan" value="com.latis.faas.dto" />
-		 -->
-		
+		<!-- <property name="packagesToScan" value="com.latis.faas.dto" /> -->
+
 		<property name="packagesToScan" value="com.latis.faas.dtoex" />
 
 	</bean>
@@ -59,6 +52,6 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory"></property>
 	</bean>
 	
-	
+
 
 </beans>

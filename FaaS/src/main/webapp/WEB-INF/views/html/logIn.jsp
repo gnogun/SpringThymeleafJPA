@@ -1,9 +1,11 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page pageEncoding="utf-8" contentType="text/html; Charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 
 <head>
 <!-- Meta, title, CSS, favicons, etc. -->
-<meta charset="utf-8">
+
 <!-- 
 <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
  -->
@@ -21,14 +23,14 @@
 
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/skin/default_skin/css/theme.css">
+	href="theme/assets/skin/default_skin/css/theme.css">
 
 <!-- Admin Forms CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/admin-tools/admin-forms/css/admin-forms.css">
+	href="theme/assets/admin-tools/admin-forms/css/admin-forms.css">
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="../theme/assets/img/favicon.ico">
+<link rel="shortcut icon" href="theme/assets/img/favicon.ico">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -39,8 +41,8 @@
 <!-- BEGIN: PAGE SCRIPTS -->
 
 <!-- jQuery -->
-<script src="../theme/vendor/jquery/jquery-1.11.1.min.js"></script>
-<script src="../theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+<script src="theme/vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
 
 
@@ -48,8 +50,8 @@
 
 <!-- start: custom js, css -->
 
-<link rel="stylesheet" type="text/css" href="../custom/css/custom.css">
-<script src="../custom/js/custom.js"></script>
+<link rel="stylesheet" type="text/css" href="custom/css/custom.css">
+<script src="custom/js/custom.js"></script>
 
 <!-- end: custom js, css -->
 
@@ -73,7 +75,7 @@
 
 						<a href="dashboard.html" title="Return to Dashboard"> <!-- 
 							<img 
-							src="../theme/assets/img/logos/logo.png" 
+							src="theme/assets/img/logos/logo.png" 
 							title="AdminDesigns Logo"
 							class="center-block img-responsive" style="max-width: 275px;">
 							 --> 
@@ -185,9 +187,9 @@
 	<!-- End: Main -->
 
 	<!-- Theme Javascript -->
-	<script src="../theme/assets/js/utility/utility.js"></script>
-	<script src="../theme/assets/js/demo/demo.js"></script>
-	<script src="../theme/assets/js/main.js"></script>
+	<script src="theme/assets/js/utility/utility.js"></script>
+	<script src="theme/assets/js/demo/demo.js"></script>
+	<script src="theme/assets/js/main.js"></script>
 
 </body>
 
