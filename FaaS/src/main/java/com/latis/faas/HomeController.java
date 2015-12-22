@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String home() {
 		
-		return "home";
+		return "html/main";
 	}
 	
 //	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
