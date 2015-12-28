@@ -24,7 +24,7 @@ public class UserInfoController {
 	}
 
 	@RequestMapping(value = "/UserInfo", method = RequestMethod.PUT, headers = { "application/json" })
-	public String addUserInfo(@RequestBody Person person) {
+	public @ResponseBody String addUserInfo(@RequestBody Person person) {
 		return null;
 	}
 	

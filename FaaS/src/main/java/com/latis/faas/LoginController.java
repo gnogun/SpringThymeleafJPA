@@ -30,7 +30,7 @@ public class LoginController {
 		Message msg = new Message();
 		msg.setMessage("success");
 		session.setAttribute("userId", form_data.getUsername());
-		
+
 		Cookie cookie = new Cookie("userId", form_data.getUsername());
 		cookie.setPath("/");
 		// 나중에 프로퍼티로 빼고
@@ -45,29 +45,4 @@ public class LoginController {
 		return "";
 	}
 
-	public String signIn() {
-
-		return "";
-	}
-}
-
-class LogInform {
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	private String username;
-	private String password;
 }
