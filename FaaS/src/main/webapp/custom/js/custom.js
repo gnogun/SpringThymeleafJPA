@@ -1,4 +1,4 @@
-jQuery(document)
+/*jQuery(document)
 		.ready(
 				function() {
 					Core.init();
@@ -460,4 +460,4 @@ jQuery(document)
 						});
 					});
 
-				});
+				});*/
