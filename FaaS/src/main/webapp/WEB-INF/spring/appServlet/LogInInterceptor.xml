@@ -15,7 +15,7 @@
 			<mvc:exclude-mapping path="/logIn/*" />
 			<bean class="com.latis.faas.interceptor.logInCheckInterceptor" />
 		</mvc:interceptor>
-	</mvc:interceptors> 
+	</mvc:interceptors>
 
 	<context:component-scan base-package="com.latis.faas" />
 </beans>

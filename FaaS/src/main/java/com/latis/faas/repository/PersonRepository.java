@@ -6,4 +6,5 @@ import com.latis.faas.dto.Person;
 
 public interface PersonRepository extends PagingAndSortingRepository<Person, Integer>{
 	
+	Person findByEmailAndPassword(String email,String password);
 }

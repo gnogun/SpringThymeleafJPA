@@ -52,6 +52,7 @@
 
 <link rel="stylesheet" type="text/css" href="custom/css/custom.css">
 <script src="custom/js/custom.js"></script>
+<script src="custom/js/userInfoCheck.js"></script>
 
 <!-- end: custom js, css -->
 
@@ -85,7 +86,7 @@
 					<!-- Login Panel/Form -->
 					<div class="panel mt30 mb25">
 
-						<form method="post" action="dashboard.html" id="contact">
+				<!-- 		<form method="post" action="dashboard.html" id="contact"> -->
 							<div class="panel-body bg-light p25 pb15">
 
 								<!-- Social Login Buttons -->
@@ -148,14 +149,14 @@
 							</div>
 
 							<div class="panel-footer clearfix">
-								<button type="submit" class="button btn-primary mr10 pull-right">로그인</button>
+								<button class="button btn-primary mr10 pull-right" onclick="logIn();">로그인</button>
 								<label class="switch ib switch-primary mt10"> <input
 									type="checkbox" name="remember" id="remember" checked>
 									<label for="remember" data-on="예" data-off="아니오"></label> <span>로그인 상태 유지</span>
 								</label>
 							</div>
 
-						</form>
+					<!-- 	</form> -->
 					</div>
 
 					<!-- Registration Links -->

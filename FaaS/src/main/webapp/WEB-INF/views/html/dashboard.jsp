@@ -21,20 +21,20 @@
 
 <!-- Admin Forms CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/admin-tools/admin-forms/css/admin-forms.css">
+	href="theme/assets/admin-tools/admin-forms/css/admin-forms.css">
 
 <!-- Iconsweets CSS(font) -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/fonts/iconsweets/iconsweets.css">
+	href="theme/assets/fonts/iconsweets/iconsweets.css">
 
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/skin/default_skin/css/theme.css">
+	href="theme/assets/skin/default_skin/css/theme.css">
 
 
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="../theme/assets/img/favicon.ico">
+<link rel="shortcut icon" href="theme/assets/img/favicon.ico">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -43,29 +43,29 @@
 <![endif]-->
 
 <!-- jQuery -->
-<script src="../theme/vendor/jquery/jquery-1.11.1.min.js"></script>
-<script src="../theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+<script src="theme/vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
 
 <!-- HighCharts Plugin -->
-<script src="../theme/vendor/plugins/highcharts/highcharts.js"></script>
+<script src="theme/vendor/plugins/highcharts/highcharts.js"></script>
 
 <!-- Sparklines Plugin -->
-<script src="../theme/vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="theme/vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
 
 <!-- Simple Circles Plugin -->
-<script src="../theme/vendor/plugins/circles/circles.js"></script>
+<script src="theme/vendor/plugins/circles/circles.js"></script>
 
 <!-- JvectorMap Plugin + US Map (more maps in plugin/assets folder) -->
 <script
-	src="../theme/vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
+	src="theme/vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
 <script
-	src="../theme/vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script>
+	src="theme/vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script>
 
 <!-- start: custom js, css -->
 
-<link rel="stylesheet" type="text/css" href="../custom/css/custom.css">
-<script src="../custom/js/custom.js"></script>
+<link rel="stylesheet" type="text/css" href="custom/css/custom.css">
+<script src="custom/js/custom.js"></script>
 
 <!-- end: custrom js, css -->
 </head>
@@ -99,7 +99,7 @@
 						<li class="dropdown-header"><span class="dropdown-title">
 								알림</span> <span class="label label-warning">12</span></li>
 						<li class="media"><a class="media-left" href="#"> <img
-								src="../theme/assets/img/avatars/5.jpg" class="mw40"
+								src="theme/assets/img/avatars/5.jpg" class="mw40"
 								alt="avatar">
 						</a>
 							<div class="media-body">
@@ -109,7 +109,7 @@
 								마지막 업데이트 1시간전 - <a class="text-system" href="#"> 하창수 </a>
 							</div></li>
 						<li class="media"><a class="media-left" href="#"> <img
-								src="../theme/assets/img/avatars/2.jpg" class="mw40"
+								src="theme/assets/img/avatars/2.jpg" class="mw40"
 								alt="avatar">
 						</a>
 							<div class="media-body">
@@ -119,7 +119,7 @@
 								마지막 업데이트 1시간전 - <a class="text-system" href="#"> 하창수 </a>
 							</div></li>
 						<li class="media"><a class="media-left" href="#"> <img
-								src="../theme/assets/img/avatars/3.jpg" class="mw40"
+								src="theme/assets/img/avatars/3.jpg" class="mw40"
 								alt="avatar">
 						</a>
 							<div class="media-body">
@@ -129,7 +129,7 @@
 								마지막 업데이트 1시간전 - <a class="text-system" href="#"> 하창수 </a>
 							</div></li>
 						<li class="media"><a class="media-left" href="#"> <img
-								src="../theme/assets/img/avatars/4.jpg" class="mw40"
+								src="theme/assets/img/avatars/4.jpg" class="mw40"
 								alt="avatar">
 						</a>
 							<div class="media-body">
@@ -144,7 +144,7 @@
 				</li>
 				<li class="dropdown"><a href="#"
 					class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img
-						src="../theme/assets/img/avatars/1.jpg" alt="avatar"
+						src="theme/assets/img/avatars/1.jpg" alt="avatar"
 						class="mw30 br64 mr15"> 하창수 <span
 						class="caret caret-tp hidden-xs"></span>
 				</a>
@@ -607,9 +607,9 @@
 
 
 	<!-- Theme Javascript -->
-	<script src="../theme/assets/js/utility/utility.js"></script>
-	<script src="../theme/assets/js/demo/demo.js"></script>
-	<script src="../theme/assets/js/main.js"></script>
+	<script src="theme/assets/js/utility/utility.js"></script>
+	<script src="theme/assets/js/demo/demo.js"></script>
+	<script src="theme/assets/js/main.js"></script>
 	<!-- END: PAGE SCRIPTS -->
 
 </body>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
@@ -18,7 +17,8 @@
 		<property name="password" value="root@faas"></property>
 		<property name="url" value="jdbc:mariadb://14.63.220.246:7749/latis_test"></property>
 	</bean>
-
+	
+	<bean id="gsonbuilder" class="com.google.gson.GsonBuilder"></bean>
 	<!-- <jpa:repositories base-package="com.latis.faas.repository" entity-manager-factory-ref="entityManagerFactory"></jpa:repositories> -->
 
 	<jpa:repositories base-package="com.latis.faas.repositoryex"
@@ -51,7 +51,7 @@
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory"></property>
 	</bean>
-	
 
+	<context:component-scan base-package="com.latis.faas.util"></context:component-scan>
 
 </beans>

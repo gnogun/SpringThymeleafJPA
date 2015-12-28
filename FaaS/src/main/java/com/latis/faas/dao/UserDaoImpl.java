@@ -18,9 +18,10 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public String logIn(String id, String password) {
+	public Person logIn(String id, String password) {
 		// TODO Auto-generated method stub
-		return null;
+		Person person = personRepository.findByEmailAndPassword(id, password);
+		return person;
 	}
 
 	@Override

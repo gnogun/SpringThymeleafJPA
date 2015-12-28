@@ -20,7 +20,7 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home() {
 		
-		return "main";
+		return "dashboard";
 	}
 	
 //	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
