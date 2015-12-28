@@ -10,9 +10,11 @@
 	<mvc:interceptors>
 		<bean class="com.latis.faas.interceptor.logInCheckInterceptor" />
 		<mvc:interceptor>
-			<mvc:mapping path="/" />
+			<mvc:mapping path="/**" />
 			<mvc:exclude-mapping path="/logIn" />
 			<mvc:exclude-mapping path="/logIn/*" />
+			<mvc:exclude-mapping path="/theme/**" />
+			<mvc:exclude-mapping path="/custom/**" />
 			<bean class="com.latis.faas.interceptor.logInCheckInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
