@@ -30,6 +30,14 @@ public class UserDaoImpl implements UserDao{
 		return null;
 	}
 
+	@Override
+	public Person getUserInfo(int idx) {
+		// TODO Auto-generated method stub
+		
+		
+		return null;
+	}
+
 	 
 	
 }

@@ -33,7 +33,7 @@ public class LoginController {
 		
 		Cookie cookie = new Cookie("userId", form_data.getUsername());
 		cookie.setPath("/");
-		// ³ªÁß¿¡ ÇÁ·ÎÆÛÆ¼·Î »©°í
+		// ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		cookie.setDomain("test.com");
 		response.addCookie(cookie);
 

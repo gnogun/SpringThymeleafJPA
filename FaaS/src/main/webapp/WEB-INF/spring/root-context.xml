@@ -17,7 +17,7 @@
 		<property name="password" value="root@faas"></property>
 		<property name="url" value="jdbc:mariadb://14.63.220.246:7749/latis_test"></property>
 	</bean>
-	
+
 	<bean id="gsonbuilder" class="com.google.gson.GsonBuilder"></bean>
 	<!-- <jpa:repositories base-package="com.latis.faas.repository" entity-manager-factory-ref="entityManagerFactory"></jpa:repositories> -->
 
@@ -53,5 +53,7 @@
 	</bean>
 
 	<context:component-scan base-package="com.latis.faas.util"></context:component-scan>
+	
+	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 
 </beans>
