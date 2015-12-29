@@ -35,7 +35,7 @@ public class UserDaoImpl implements UserDao{
 		// TODO Auto-generated method stub
 		
 		
-		return null;
+		return personRepository.findByIdx(idx);
 	}
 
 	 

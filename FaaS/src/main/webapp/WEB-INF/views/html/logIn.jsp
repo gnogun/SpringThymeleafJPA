@@ -9,7 +9,7 @@
 <!-- 
 <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
  -->
- <title>FaaS - Login</title>
+<title>FaaS - Login</title>
 <meta name="keywords"
 	content="HTML5 Bootstrap 3 Admin Template UI Theme" />
 <meta name="description"
@@ -52,7 +52,9 @@
 
 <link rel="stylesheet" type="text/css" href="custom/css/custom.css">
 <script src="custom/js/custom.js"></script>
+<!-- 
 <script src="custom/js/userInfoCheck.js"></script>
+ -->
 
 <!-- end: custom js, css -->
 
@@ -79,55 +81,21 @@
 							src="theme/assets/img/logos/logo.png" 
 							title="AdminDesigns Logo"
 							class="center-block img-responsive" style="max-width: 275px;">
-							 --> 
+							 -->
 						</a>
 					</div>
 
 					<!-- Login Panel/Form -->
 					<div class="panel mt30 mb25">
 
-				<!-- 		<form method="post" action="dashboard.html" id="contact"> -->
+						<form method="post" action="loginProcess" id="contact">
 							<div class="panel-body bg-light p25 pb15">
-
-								<!-- Social Login Buttons -->
-								<!-- 
-								<div class="section row">
-									<div class="col-md-6">
-										<a href="#"
-											class="button btn-social facebook span-left btn-block"> <span>
-												<i class="fa fa-facebook"></i>
-										</span>Facebook
-										</a>
-									</div>
-									<div class="col-md-6">
-										<a href="#"
-											class="button btn-social googleplus span-left btn-block">
-											<span> <i class="fa fa-google-plus"></i>
-										</span>Google+
-										</a>
-									</div>
-									<div class="col-md-6 hidden">
-										<a href="#"
-											class="button btn-social twitter span-left btn-block"> <span>
-												<i class="fa fa-twitter"></i>
-										</span>Twitter
-										</a>
-									</div>
-								</div>
-								-->
-
-								<!-- Divider -->
-								<!-- 
-								<div class="section-divider mv30">
-									<span>OR</span>
-								</div>
-								-->
 
 								<!-- Username Input -->
 								<div class="section">
 									<label for="username" class="field-label text-muted fs18 mb10">아이디</label>
-									<label for="username" class="field prepend-icon"> <input
-										type="text" name="username" id="username" class="gui-input"
+									<label for="username" class="field prepend-icon"> 
+										<input type="text" name="username" id="username" class="gui-input"
 										placeholder="아이디를 입력하세요"> <label for="username"
 										class="field-icon"> <i class="fa fa-user"></i>
 									</label>
@@ -149,24 +117,29 @@
 							</div>
 
 							<div class="panel-footer clearfix">
-								<button class="button btn-primary mr10 pull-right" onclick="logIn();">로그인</button>
+								<button class="button btn-primary mr10 pull-right" type="submit"
+									>로그인</button>
+									<!-- 
 								<label class="switch ib switch-primary mt10"> <input
 									type="checkbox" name="remember" id="remember" checked>
-									<label for="remember" data-on="예" data-off="아니오"></label> <span>로그인 상태 유지</span>
+									<label for="remember" data-on="예" data-off="아니오"></label> <span>로그인
+										상태 유지</span>
 								</label>
+									 -->
 							</div>
 
-					<!-- 	</form> -->
+							<!-- 	</form> -->
 					</div>
 
 					<!-- Registration Links -->
 					<div class="login-links">
 						<p>
-							<a href="pages_login-alt.html" class="active" title="Sign In">비밀번호 찾기</a>
+							<a href="pages_login-alt.html" class="active" title="Sign In">비밀번호
+								찾기</a>
 						</p>
 						<p>
-							계정이 없으신가요? <a href="pages_login-alt.html"
-								title="Sign In">계정 만들기</a>
+							계정이 없으신가요? <a href="pages_login-alt.html" title="Sign In">계정
+								만들기</a>
 						</p>
 					</div>
 

@@ -18,26 +18,33 @@ import com.latis.faas.util.JsonBuilder;
 @Controller
 public class LoginController {
 
-	@RequestMapping(value = "/logIn")
+	@RequestMapping(value = "/login")
 	public String logIn() {
-		return "logIn";
+		return "login";
 	}
 
-	@RequestMapping(method = RequestMethod.POST, value = "/logIn/check", headers = { "Accept=application/json" })
-	public @ResponseBody String logInCheck(@RequestBody LogInform form_data,
-			HttpSession session, HttpServletResponse response) {
-
-		Message msg = new Message();
-		msg.setMessage("success");
-		session.setAttribute("userId", form_data.getUsername());
-
-		Cookie cookie = new Cookie("userId", form_data.getUsername());
-		cookie.setPath("/");
-		// ���߿� ������Ƽ�� ����
-		cookie.setDomain("test.com");
-		response.addCookie(cookie);
-
-		return msg.toString();
+//	@RequestMapping(method = RequestMethod.POST, value = "/logIn/check", headers = { "Accept=application/json" })
+//	public @ResponseBody String logInCheck(@RequestBody LogInform form_data,
+//			HttpSession session, HttpServletResponse response) {
+//
+//		Message msg = new Message();
+//		msg.setMessage("success");
+//		session.setAttribute("userId", form_data.getUsername());
+//
+//		Cookie cookie = new Cookie("userId", form_data.getUsername());
+//		cookie.setPath("/");
+//		// ���߿� ������Ƽ�� ����
+//		cookie.setDomain("test.com");
+//		response.addCookie(cookie);
+//
+//		return msg.toString();
+//	}
+	
+	@RequestMapping(value = "/signIn")
+	public String signIn(){
+		
+		return "signIn";
+		
 	}
 
 	public String logOut() {

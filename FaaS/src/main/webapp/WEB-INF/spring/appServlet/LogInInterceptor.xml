@@ -9,14 +9,12 @@
 	<mvc:annotation-driven />
 	<mvc:interceptors>
 		<bean class="com.latis.faas.interceptor.logInCheckInterceptor" />
-		<mvc:interceptor>
-			<mvc:mapping path="/**" />
-			<mvc:exclude-mapping path="/logIn" />
-			<mvc:exclude-mapping path="/logIn/*" />
-			<mvc:exclude-mapping path="/theme/**" />
-			<mvc:exclude-mapping path="/custom/**" />
+		<!-- <mvc:interceptor>
+			<mvc:mapping path="/**" /> <mvc:exclude-mapping path="/logIn" /> 
+				<mvc:exclude-mapping path="/logIn/*" /> <mvc:exclude-mapping path="/theme/**" 
+				/> <mvc:exclude-mapping path="/custom/**" />
 			<bean class="com.latis.faas.interceptor.logInCheckInterceptor" />
-		</mvc:interceptor>
+		</mvc:interceptor> -->
 	</mvc:interceptors>
 
 	<context:component-scan base-package="com.latis.faas" />

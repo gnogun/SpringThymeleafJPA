@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page pageEncoding="utf-8" contentType="text/html; Charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -21,14 +23,14 @@
 
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/skin/default_skin/css/theme.css">
+	href="theme/assets/skin/default_skin/css/theme.css">
 
 <!-- Admin Forms CSS -->
 <link rel="stylesheet" type="text/css"
-	href="../theme/assets/admin-tools/admin-forms/css/admin-forms.css">
+	href="theme/assets/admin-tools/admin-forms/css/admin-forms.css">
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="../theme/assets/img/favicon.ico">
+<link rel="shortcut icon" href="theme/assets/img/favicon.ico">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -39,8 +41,8 @@
 <!-- BEGIN: PAGE SCRIPTS -->
 
 <!-- jQuery -->
-<script src="../theme/vendor/jquery/jquery-1.11.1.min.js"></script>
-<script src="../theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+<script src="theme/vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="theme/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
 
 
@@ -48,8 +50,8 @@
 
 <!-- start: custom js, css -->
 
-<link rel="stylesheet" type="text/css" href="../custom/css/custom.css">
-<script src="../custom/js/custom.js"></script>
+<link rel="stylesheet" type="text/css" href="custom/css/custom.css">
+<script src="custom/js/custom.js"></script>
 
 <!-- end: custom js, css -->
 
@@ -77,32 +79,23 @@
 						</div>
 						<!-- end .form-header section -->
 
-						<form method="post" action="/" id="form-register2">
+						<form method="POST" action="UserInfo" id="form-register2">
+						<input type="hidden" name="_method" value="put" />
 							<div class="panel-body p25">
 								<div class="section-divider mt10 mb40">
 									<span>Set up your account</span>
 								</div>
 								<!-- .section-divider -->
 
-								<div class="section row">
-									<div class="col-md-6">
-										<label for="firstname" class="field prepend-icon"> <input
-											type="text" name="firstname" id="firstname" class="gui-input"
-											placeholder="First name..."> <label for="firstname"
-											class="field-icon"> <i class="fa fa-user"></i>
+								<div class="section">
+										<label for="firstname" class="field prepend-icon"> 
+											<input type="text" name="name" id="firstname" class="gui-input"
+											placeholder="name..."> 
+											<label for="firstname" class="field-icon"> <i class="fa fa-user"></i>
 										</label>
 										</label>
-									</div>
 									<!-- end section -->
 
-									<div class="col-md-6">
-										<label for="lastname" class="field prepend-icon"> <input
-											type="text" name="lastname" id="lastname" class="gui-input"
-											placeholder="Last name..."> <label for="lastname"
-											class="field-icon"> <i class="fa fa-user"></i>
-										</label>
-										</label>
-									</div>
 									<!-- end section -->
 								</div>
 								<!-- end .section row section -->
@@ -123,35 +116,6 @@
 										placeholder="Create a password"> <label for="password"
 										class="field-icon"> <i class="fa fa-lock"></i>
 									</label>
-									</label>
-								</div>
-								<!-- end section -->
-
-								<div class="section">
-									<label for="confirmPassword" class="field prepend-icon">
-										<input type="text" name="confirmPassword" id="confirmPassword"
-										class="gui-input" placeholder="Retype your password">
-										<label for="confirmPassword" class="field-icon"> <i
-											class="fa fa-unlock-alt"></i>
-									</label>
-									</label>
-								</div>
-								<!-- end section -->
-
-								<div class="section-divider mv40">
-									<span>7 days free trial</span>
-								</div>
-								<!-- .section-divider -->
-
-								<div class="section">
-									<label class="option block"> <input type="checkbox"
-										name="trial"> <span class="checkbox mr10"></span>Sign
-										me up for a <a href="#" class="theme-link"> 7-day free PRO
-											trial. </a>
-									</label> <label class="option block mt10"> <input
-										type="checkbox" name="terms"> <span
-										class="checkbox mr10"></span>I agree to the <a href="#"
-										class="theme-link"> terms of use. </a>
 									</label>
 								</div>
 								<!-- end section -->
@@ -178,9 +142,9 @@
 	<!-- End: Main -->
 
 	<!-- Theme Javascript -->
-	<script src="../theme/assets/js/utility/utility.js"></script>
-	<script src="../theme/assets/js/demo/demo.js"></script>
-	<script src="../theme/assets/js/main.js"></script>
+	<script src="theme/assets/js/utility/utility.js"></script>
+	<script src="theme/assets/js/demo/demo.js"></script>
+	<script src="theme/assets/js/main.js"></script>
 
 </body>
 

@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface PersonRepository extends PagingAndSortingRepository<Person, Integer>{
 	
-	Person findByEmailAndPassword(String email,String password);	
+	public Person findByEmailAndPassword(String email,String password);
+	public Person findByIdx(int idx);
 	
 }
