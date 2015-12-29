@@ -35,7 +35,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		response.addCookie(cookie);
 		
 		
-		response.sendRedirect(request.getContextPath() +  "/");
+		response.sendRedirect(request.getContextPath() +  "/ProjectList/" + auth.getName());
 		
 	}
 

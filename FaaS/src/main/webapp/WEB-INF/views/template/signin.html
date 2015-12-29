@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Signin page</title>
+  </head>
+  <body>
+    <h1>Sign In</h1>    
+    <form th:action="@{/UserInfo}" method="post">
+    <input type="hidden" name="_method" value="put" />
+    	<label>Email</label>:
+      <input type="text" id="j_username" name="email" /> <br />
+      <label>Name</label>:
+      <input type="text" id="j_username" name="name" /> <br />
+      <label>Password</label>:
+      <input type="password" id="j_password" name="password" /> <br />
+      <input type="submit" value="Regist" />
+    </form>
+  </body>
+</html>

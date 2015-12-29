@@ -40,10 +40,10 @@ public class LoginController {
 //		return msg.toString();
 //	}
 	
-	@RequestMapping(value = "/signIn")
+	@RequestMapping(value = "/signin")
 	public String signIn(){
 		
-		return "signIn";
+		return "signin";
 		
 	}
 
