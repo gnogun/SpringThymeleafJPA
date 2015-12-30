@@ -58,7 +58,9 @@
 
 
 		<security:logout logout-url="/logout"
-			logout-success-url="/login" delete-cookies="JSESSIONID" />
+		invalidate-session="true"
+		success-handler-ref="logoutSuccessHandler"
+			 />
 
 
 		<!-- delete-cookies="" logout-url="" invalidate-session="true" success-handler-ref="" -->
@@ -90,4 +92,5 @@
 
 	<bean id="loginSuccessHandler" class="com.latis.faas.security.LoginSuccessHandler"></bean>
 	<bean id="loginFailureHandler" class="com.latis.faas.security.LoginFailureHandler"></bean>
+	<bean id="logoutSuccessHandler" class="com.latis.faas.security.CustomLogoutSuccessHandler"></bean>
 </beans>
