@@ -1,6 +1,5 @@
 package com.latis.faas.dtoex;
 
-
 import java.util.List;
 import java.util.Set;
 
@@ -16,7 +15,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
-@Entity(name="person")
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@Entity(name = "person")
 public class Person {
 
 	private int idx;
@@ -24,13 +26,13 @@ public class Person {
 	private String name;
 	private String email;
 	private String password;
-	
+
 	private List<Group> groups;
-	
+
 	public Person() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public Person(String name, String email, String password) {
 		// TODO Auto-generated constructor stub
 		this.name = name;
@@ -45,7 +47,7 @@ public class Person {
 		this.password = password;
 		this.groups = groups;
 	}
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public int getIdx() {
@@ -67,7 +69,7 @@ public class Person {
 	public String getEmail() {
 		return email;
 	}
-	
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -79,7 +81,7 @@ public class Person {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	@OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
 	public List<Group> getGroups() {
 		return groups;
@@ -88,7 +90,6 @@ public class Person {
 	public void setGroups(List<Group> groups) {
 		this.groups = groups;
 	}
-	
 
 	@Override
 	public String toString() {
@@ -96,5 +97,4 @@ public class Person {
 		return "name=" + name + ", password=" + password + ", email=" + email;
 	}
 
-	
 }

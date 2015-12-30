@@ -19,9 +19,10 @@
 			뭘 붙일지 몰라서 그냥 default prefix 사용했음 -->
 
 
+<security:intercept-url pattern="/**"
+			access="permitAll" />
 
-
-		<security:intercept-url pattern="/login"
+	<!-- 	<security:intercept-url pattern="/login"
 			access="permitAll" />
 		<security:intercept-url pattern="/signin"
 			access="permitAll" />
@@ -35,7 +36,7 @@
 		<security:intercept-url pattern="/custom/**"
 			access="permitAll" />
 		<security:intercept-url pattern="/**"
-			access="hasAnyRole('ROLE_USER')" />
+			access="hasAnyRole('ROLE_USER')" /> -->
 
 		<!-- access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" -->
 
@@ -80,12 +81,12 @@
 		ref="CustomAuthenticationProvider"> </security:authentication-provider> </security:authentication-manager> -->
 
 	<bean id="CustomAuthenticationProvider" class="com.latis.faas.security.CustomAuthenticationProvider">
-		<property name="userDetailsService" ref="userService"></property>
+		<property name="userDetailsService" ref="userDetailService"></property>
 
 		<property name="passwordEncoder" ref="passwordEncoder"></property>
 	</bean>
 
-	<bean id="userService" class="com.latis.faas.security.CustomUserDetailService" />
+	<bean id="userDetailService" class="com.latis.faas.security.CustomUserDetailService" />
 
 	<bean id="passwordEncoder"
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>

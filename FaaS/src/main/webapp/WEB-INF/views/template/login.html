@@ -4,13 +4,12 @@
     <title>Login page</title>
   </head>
   <body>
-    <h1>로그인 Login page</h1>
-    <p th:if="${loginError}">Wrong user or password</p>
+    <h1>Login page</h1>
     <form th:action="@{/loginProcess}" method="post">
-      <label for="j_username">Username</label>:
-      <input type="text" id="j_username" name="username" /> <br />
-      <label for="j_password">Password</label>:
-      <input type="password" id="j_password" name="password" /> <br />
+      <label for="username">Username</label>:
+      <input type="text" id="username" name="username" /> <br />
+      <label for="password">Password</label>:
+      <input type="password" id="password" name="password" /> <br />
       <input type="submit" value="Log in" />
     </form>
   </body>

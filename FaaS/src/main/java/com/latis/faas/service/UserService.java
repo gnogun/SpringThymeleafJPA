@@ -2,7 +2,7 @@ package com.latis.faas.service;
 
 import org.springframework.stereotype.Service;
 
-import com.latis.faas.dto.Person;
+import com.latis.faas.dtoex.Person;
 
 @Service
 public interface UserService {

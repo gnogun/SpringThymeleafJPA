@@ -3,7 +3,7 @@ package com.latis.faas.service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.latis.faas.dao.UserDao;
-import com.latis.faas.dto.Person;
+import com.latis.faas.dtoex.Person;
 
 public class UserServiceImpl implements UserService {
 	
