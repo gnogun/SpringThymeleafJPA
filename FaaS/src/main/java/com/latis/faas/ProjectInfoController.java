@@ -26,7 +26,7 @@ public class ProjectInfoController {
 	@RequestMapping(value = "/ProjectInfo/{projectID}", method = RequestMethod.GET)
 	public ModelAndView getProjectInfo(@PathVariable String projectID, ModelAndView model)
 	{	
-		Project project1 = new Project("ÎùºÎ∞î ÎπÑÏΩò", "ÏÑ§Î™Ö");
+		Project project1 = new Project("Project1", "∞˙¡¶1");
 		project1.setIdx(1);
 		
 		
@@ -40,8 +40,8 @@ public class ProjectInfoController {
 	@RequestMapping(value = "/ProjectList/{uid}", method = RequestMethod.GET)
 	public ModelAndView getProjectList(@PathVariable String uid, ModelAndView model)
 	{	
-		Project project1 = new Project("ÎùºÎ∞î ÎπÑÏΩò", "ÏÑ§Î™Ö");
-		Project project2 = new Project("ÎùºÎ∞î ÎπÑÏΩò2", "ÏÑ§Î™Ö2");
+		Project project1 = new Project("Project1", "∞˙¡¶1");
+		Project project2 = new Project("Project2", "∞˙¡¶2");
 		
 		project1.setIdx(1);
 		project2.setIdx(2);
