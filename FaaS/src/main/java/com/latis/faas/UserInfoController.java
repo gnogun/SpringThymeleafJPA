@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.latis.faas.dto.Message;
 import com.latis.faas.dtoex.Person;
 import com.latis.faas.service.UserService;
 import com.latis.faas.util.JsonBuilder;
@@ -30,10 +31,17 @@ public class UserInfoController {
 
 	@RequestMapping(value = "/UserInfo", method = RequestMethod.PUT, produces={"application/json"})
 	public @ResponseBody String addUserInfo(@RequestBody Person person) {
-	    
-		userService.signIn(person);
-		
-		return null;
+	
+		Message msg = new Message();
+		if( userService.signIn(person) != null) 
+		{
+			msg.setMessage("success");
+		}
+		else
+		{
+			msg.setMessage("fail");
+		}
+		return msg.toString();
 	}
 	
 	
