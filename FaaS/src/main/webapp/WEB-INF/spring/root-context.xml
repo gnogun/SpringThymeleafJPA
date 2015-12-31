@@ -9,13 +9,23 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
 	<!-- Data Source -->
-	<bean id="dataSource"
+	<!-- <bean id="dataSource"
 		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 
 		<property name="driverClass" value="org.mariadb.jdbc.Driver"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="root@faas"></property>
 		<property name="url" value="jdbc:mariadb://14.63.220.246:7749/latis_test"></property>
+	</bean> -->
+	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+
+		<property name="driverClass" value="org.apache.derby.jdbc.ClientDriver"></property>
+		<property name="username" value="user"></property>
+		<property name="password" value="gnogun"></property>
+		<property name="url"
+			value="jdbc:derby://localhost:1527/faas"></property>
 	</bean>
 
 	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> 
@@ -37,13 +47,15 @@
 		</property>
 		<property name="dataSource" ref="dataSource" />
 		<property name="jpaProperties">
+		
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.DerbyDialect</prop>
+				<prop key="hibernate.default_schema">latis</prop>
 				<prop key="hibernate.connection.pool_size">1</prop>
 				<prop key="hibernate.connection.shutdown">true</prop>
 				<prop key="hibernate.show_sql">true</prop> <!-- SQL 출력 -->
 				<prop key="hibernate.ddl_auto">auto</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop> <!-- 테이블 자동 생성 -->
+				<prop key="hibernate.hbm2ddl.auto">create</prop> 
 			</props>
 		</property>
 		<!-- 엔티티 정의된 클래스들이 있는 패키지 등록 -->
