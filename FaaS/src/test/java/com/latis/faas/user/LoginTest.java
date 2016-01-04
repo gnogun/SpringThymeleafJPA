@@ -30,8 +30,9 @@ import com.latis.faas.repositoryex.PersonRepository;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {
 		"file:src/main/webapp/WEB-INF/spring/root-context.xml",
+		"file:src/main/webapp/WEB-INF/spring/security-context.xml",
 		"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml",
-		"file:src/main/webapp/WEB-INF/spring/security-context.xml" })
+		"file:src/main/webapp/WEB-INF/spring/appServlet/LogInInterceptor.xml" })
 @WebAppConfiguration
 public class LoginTest {
 

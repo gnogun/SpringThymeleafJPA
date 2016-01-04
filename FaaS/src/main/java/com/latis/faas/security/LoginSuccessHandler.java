@@ -16,6 +16,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
+import com.latis.faas.dtoex.Person;
+
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
 	@Override
@@ -27,15 +29,16 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		
 		List<GrantedAuthority> authorities = (List<GrantedAuthority>) auth.getAuthorities();
 		String strAuth = authorities.get(0).getAuthority();
-		
+	    
+		Person person = (Person)auth.getPrincipal();
+	    
 		Cookie cookie = new Cookie("userId", auth.getName());
 		cookie.setPath("/");
 		// ���߿� ������Ƽ�� ����
 //		cookie.setDomain("test.com");
 		response.addCookie(cookie);
 		
-		
-		response.sendRedirect(request.getContextPath() +  "/ProjectList/" + auth.getName());
+		response.sendRedirect(request.getContextPath() +  "/ProjectList");
 		
 	}
 

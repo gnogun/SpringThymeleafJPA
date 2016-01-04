@@ -68,17 +68,17 @@
 
 	</security:http>
 
-	<security:authentication-manager>
+	<!-- <security:authentication-manager>
 		<security:authentication-provider>
 			<security:user-service>
 				<security:user name="admin" password="1234"
 					authorities="ROLE_USER" />
 			</security:user-service>
 		</security:authentication-provider>
-	</security:authentication-manager>
+	</security:authentication-manager> -->
 
-	<!-- <security:authentication-manager> <security:authentication-provider 
-		ref="CustomAuthenticationProvider"> </security:authentication-provider> </security:authentication-manager> -->
+	<security:authentication-manager> <security:authentication-provider 
+		ref="CustomAuthenticationProvider"> </security:authentication-provider> </security:authentication-manager>
 
 	<bean id="CustomAuthenticationProvider" class="com.latis.faas.security.CustomAuthenticationProvider">
 		<property name="userDetailsService" ref="userDetailService"></property>

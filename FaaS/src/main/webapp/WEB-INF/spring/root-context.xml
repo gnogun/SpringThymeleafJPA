@@ -55,7 +55,7 @@
 				<prop key="hibernate.connection.shutdown">true</prop>
 				<prop key="hibernate.show_sql">true</prop> <!-- SQL 출력 -->
 				<prop key="hibernate.ddl_auto">auto</prop>
-				<prop key="hibernate.hbm2ddl.auto">update</prop> 
+				<prop key="hibernate.hbm2ddl.auto">create</prop> 
 			</props>
 		</property>
 		<!-- 엔티티 정의된 클래스들이 있는 패키지 등록 -->
