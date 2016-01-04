@@ -55,7 +55,7 @@ public class ProjectTest {
 			projectRepository.save(project);
 		}
 		
-		
+	
 		List<Group> groups = groupRepository.findByPerson(person);
 		
 		for(Group group : groups)

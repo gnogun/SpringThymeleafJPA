@@ -49,7 +49,7 @@ public class UserTest {
 	public void insert() {
 
 		Person person = new Person("gno", "gnogun@naver.com", "gno");
-
+	
 		service.signIn(person);
 
 		// repository.save(person);
@@ -58,8 +58,8 @@ public class UserTest {
 
 	@Test
 	public void selectTest() {
-		System.out.println(repository.findByName("gno").size());
-		System.out.println(repository.findByName("gno").get(0).getName());
+		/*System.out.println(repository.findByName("gno").size());
+		System.out.println(repository.findByName("gno").get(0).getName());*/
 
 	}
 
