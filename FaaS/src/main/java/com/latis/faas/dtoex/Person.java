@@ -3,11 +3,13 @@ package com.latis.faas.dtoex;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -61,6 +63,7 @@ public class Person {
 		this.name = name;
 	}
 
+	@Column(unique=true, nullable=false)
 	public String getEmail() {
 		return email;
 	}
@@ -77,6 +80,8 @@ public class Person {
 		this.password = password;
 	}
 
+	
+	
 	@OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
 	public List<Group> getGroups() {
 		return groups;

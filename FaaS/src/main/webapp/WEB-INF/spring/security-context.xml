@@ -19,23 +19,13 @@
 			뭘 붙일지 몰라서 그냥 default prefix 사용했음 -->
 
 
-<security:intercept-url pattern="/**"
-			access="permitAll" />
+		<security:intercept-url pattern="/**" access="permitAll" />
 
-	<!-- 	<security:intercept-url pattern="/login"
-			access="permitAll" />
-		<security:intercept-url pattern="/signin"
-			access="permitAll" />
-		<security:intercept-url pattern="/userinfo"
-			access="permitAll" />
-
-		<security:intercept-url pattern="/login/*"
-			access="permitAll" />
-		<security:intercept-url pattern="/theme/**"
-			access="permitAll" />
-		<security:intercept-url pattern="/custom/**"
-			access="permitAll" />
-		<security:intercept-url pattern="/**"
+		<!-- <security:intercept-url pattern="/login" access="permitAll" /> <security:intercept-url 
+			pattern="/signin" access="permitAll" /> <security:intercept-url pattern="/userinfo" 
+			access="permitAll" /> <security:intercept-url pattern="/login/*" access="permitAll" 
+			/> <security:intercept-url pattern="/theme/**" access="permitAll" /> <security:intercept-url 
+			pattern="/custom/**" access="permitAll" /> <security:intercept-url pattern="/**" 
 			access="hasAnyRole('ROLE_USER')" /> -->
 
 		<!-- access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" -->
@@ -48,8 +38,7 @@
 			무조건 handler에 정의된 페이지로 이동 -->
 
 		<security:form-login login-page="/login"
-			default-target-url="/"
-			 authentication-success-handler-ref="loginSuccessHandler"
+			default-target-url="/" authentication-success-handler-ref="loginSuccessHandler"
 			authentication-failure-handler-ref="loginFailureHandler"
 			always-use-default-target="true" login-processing-url="/loginProcess"
 			username-parameter="username" password-parameter="password" />
@@ -59,26 +48,22 @@
 
 
 		<security:logout logout-url="/logout"
-		invalidate-session="true"
-		success-handler-ref="logoutSuccessHandler"
-			 />
+			invalidate-session="true" success-handler-ref="logoutSuccessHandler" />
 
 
 		<!-- delete-cookies="" logout-url="" invalidate-session="true" success-handler-ref="" -->
 
 	</security:http>
 
-	<!-- <security:authentication-manager>
-		<security:authentication-provider>
-			<security:user-service>
-				<security:user name="admin" password="1234"
-					authorities="ROLE_USER" />
-			</security:user-service>
-		</security:authentication-provider>
-	</security:authentication-manager> -->
+	<!-- <security:authentication-manager> <security:authentication-provider> 
+		<security:user-service> <security:user name="admin" password="1234" authorities="ROLE_USER" 
+		/> </security:user-service> </security:authentication-provider> </security:authentication-manager> -->
 
-	<security:authentication-manager> <security:authentication-provider 
-		ref="CustomAuthenticationProvider"> </security:authentication-provider> </security:authentication-manager>
+	<security:authentication-manager>
+		<security:authentication-provider
+			ref="CustomAuthenticationProvider">
+		</security:authentication-provider>
+	</security:authentication-manager>
 
 	<bean id="CustomAuthenticationProvider" class="com.latis.faas.security.CustomAuthenticationProvider">
 		<property name="userDetailsService" ref="userDetailService"></property>

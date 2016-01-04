@@ -31,21 +31,27 @@ public class GroupTest {
 	@Test
 	public void projectMakeEx(){
 		
-		Person person = new Person("gno2222222", "gnogun@naver.com", "gno");
-		Project project = new Project("project122222", "description");
+		Person person = new Person("gno", "gnogun@naver.com", "gno");
 		
-		Group group = new Group(person, project, "owner");
+		for( int i = 0 ; i < 10; i++)
+		{
+			Project project = new Project("project" + i, "description" + i);
+			Group group = new Group(person, project, "owner");
+			project.getGroups().add(group);
+			
+			projectRepository.save(project);
+		}
 		
-		project.getGroups().add(group);
+//		List<Group> groups = grepo.findByPerson(person);
 		
-		personRepository.save(person);
+		List<Group> groups = grepo.joinByPerson(person);
 		
-		projectRepository.save(project);
-		
-//		List<Group> list = grepo.findByPerson(person);
-		List<Group> list = grepo.findByProject(project);
-		
-		System.out.println("!");
+		for(Group group : groups)
+		{
+			System.out.println(group.getProject().getIdx());
+			System.out.println(group.getProject().getName());
+			System.out.println(group.getProject().getDescription());
+		}
 		
 	}
 

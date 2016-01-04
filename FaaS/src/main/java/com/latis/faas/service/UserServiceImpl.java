@@ -1,6 +1,7 @@
 package com.latis.faas.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.latis.faas.dao.UserDao;
 import com.latis.faas.dtoex.Person;
@@ -9,10 +10,16 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private UserDao userDao;
+	
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
 
 	@Override
 	public Person signIn(Person person) {
 		// TODO Auto-generated method stub
+		
+		person.setPassword(passwordEncoder.encode(person.getPassword()));
+		
 		return userDao.signIn(person);
 	}
 

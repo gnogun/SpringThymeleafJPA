@@ -19,24 +19,11 @@ import com.latis.faas.dtoex.Project;
 public class Group implements Serializable {
 
 	private int idx;
-
-	private int idx;
 	private String role;
 
 	private Person person;
 	private Project project;
 	
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	public int getIdx() {
-		return idx;
-	}
-
-	public void setIdx(int idx) {
-		this.idx = idx;
-	}
-
 	public Group() {
 		// TODO Auto-generated constructor stub
 	}

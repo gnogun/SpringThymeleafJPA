@@ -12,19 +12,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.junit.Ignore;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.google.gson.annotations.Expose;
+
 @Entity(name="project")
 public class Project {
 	
 	private int idx;
-	
-	
 	private String name;
 	private String description;
 	
 	private List<Group> groups;
 	
-	
-
 	public Project() {
 		// TODO Auto-generated constructor stub
 	}
@@ -57,6 +59,7 @@ public class Project {
 		this.description = description;
 	}
 	
+	
 	@OneToMany(mappedBy = "project", cascade = CascadeType.ALL)
 	public List<Group> getGroups() {
 		return groups;
@@ -70,6 +73,6 @@ public class Project {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "name=" + name + ", desc=" + description;
+		return "{ \"idx\" : \"" + idx + "\", \"name\" : \"" + name + "\" }";
 	}
 }
