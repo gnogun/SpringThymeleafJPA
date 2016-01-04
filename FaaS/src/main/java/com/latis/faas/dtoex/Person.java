@@ -94,7 +94,7 @@ public class Person {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "name=" + name + ", password=" + password + ", email=" + email;
+		return "{ 'idx':'" + idx + "', 'name':'" + name + "', 'email':'" + email + "'}";
 	}
 
 }

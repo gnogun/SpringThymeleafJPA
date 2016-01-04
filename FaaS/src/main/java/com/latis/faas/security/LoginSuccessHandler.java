@@ -30,7 +30,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		
 		Person person = userDetail.getPerson();
 	    
-		Cookie cookie = new Cookie("userId", auth.getName());
+		Cookie cookie = new Cookie("userInfo", person.toString());
 		cookie.setPath("/");
 		// ���߿� ������Ƽ�� ����
 //		cookie.setDomain("test.com");

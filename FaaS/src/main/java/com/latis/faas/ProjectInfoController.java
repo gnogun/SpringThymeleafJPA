@@ -14,6 +14,7 @@ import org.springframework.http.HttpRequest;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,60 +29,82 @@ import com.latis.faas.util.NumberGenerator;
 
 @Controller
 public class ProjectInfoController {
-	
+
 	@Autowired
 	private ProjectService projectService;
 
-	@RequestMapping(value = "/ProjectInfo", method = RequestMethod.PUT, headers = { "application/json" })
-	public @ResponseBody String addProjectInfo(@RequestParam Project project)
-	{
-		return "";
+	@RequestMapping(value = "/createproject")
+	public String createProject() {
+		return "create_project";
 	}
-	
-	@RequestMapping(value = "/ProjectInfo/{projectID}", method = RequestMethod.GET)
-	public ModelAndView getProjectInfo(@PathVariable String projectID, ModelAndView model, HttpServletResponse res
-			,HttpServletRequest rq)
-	{	
+
+	@RequestMapping(value = "/ProjectInfo", method = RequestMethod.PUT)
+	public String addProjectInfo(@RequestParam("name") String name,
+			@RequestParam("description") String description,
+			Authentication auth, HttpServletResponse res) {
+
+		Project cproject = new Project(name, description);
+
+		CustomUserDetail userDetail = (CustomUserDetail) auth.getPrincipal();
 		
+		cproject = projectService.createProject(cproject,
+				userDetail.getPerson());
+		try {
+			if (cproject != null) {
+				res.sendRedirect("ProjectInfo/" + cproject.getIdx());
+			} else {
+				return "create_project";
+			}
+			return null;
+		} catch (IOException e) {
+			return "create_project";
+		}
+
+	}
+
+	@RequestMapping(value = "/ProjectInfo/{projectID}", method = RequestMethod.GET)
+	public ModelAndView getProjectInfo(@PathVariable String projectID,
+			ModelAndView model, HttpServletResponse res, HttpServletRequest rq) {
+
 		Project project = null;
-		if(NumberGenerator.tryParseInt(projectID)){
+		if (NumberGenerator.tryParseInt(projectID)) {
 			int pid = Integer.parseInt(projectID);
 			project = projectService.getProjectInfo(pid);
-		}		
-		
-		if( project != null)
-		{
+		}
+
+		if (project != null) {
 			model.addObject("project", project);
 			model.setViewName("project_info");
-			
+
 			Cookie cookie = new Cookie("currentProject", project.toString());
 			cookie.setPath("/");
 			res.addCookie(cookie);
-			
-		}else{
+
+		} else {
 			try {
-				res.sendRedirect(rq.getContextPath() + "/ProjectList");
+				res.sendRedirect("ProjectList");
 				return null;
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
+
 		return model;
 	}
-	
+
 	@RequestMapping(value = "/ProjectList", method = RequestMethod.GET)
-	public ModelAndView getProjectList(HttpSession session, Authentication auth, ModelAndView model)
-	{
+	public ModelAndView getProjectList(HttpSession session,
+			Authentication auth, ModelAndView model) {
 		CustomUserDetail userDetail = (CustomUserDetail) auth.getPrincipal();
-		
-		List<Project> list = projectService.getProjectList(userDetail.getPerson());
-		
+
+		List<Project> list = projectService.getProjectList(userDetail
+				.getPerson());
+
 		model.addObject("projects", list);
 		model.setViewName("project_list");
-		
+
 		return model;
 	}
-	
+
 }

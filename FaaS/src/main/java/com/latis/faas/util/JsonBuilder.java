@@ -18,7 +18,7 @@ public class JsonBuilder {
     }
 	
 	public static String buildJson(Object obj) {
-		return gsonbuilder.excludeFieldsWithoutExposeAnnotation().create().toJson(obj);
+		return gsonbuilder.create().toJson(obj);
 	}
 
 	public static <T> T getObject(Class<T> type, String jsonString) {
