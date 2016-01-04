@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -13,6 +15,8 @@ import com.latis.faas.dtoex.Project;
 
 @Entity(name="project_groups")
 public class Group implements Serializable {
+
+	private int idx;
 
 	private String role;
 
@@ -29,6 +33,16 @@ public class Group implements Serializable {
 		this.role = role;
 	}
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public int getIdx() {
+		return idx;
+	}
+
+	public void setIdx(int idx) {
+		this.idx = idx;
+	}
+	
 	@Column(name = "role")
 	public String getRole() {
 		return role;
@@ -38,7 +52,6 @@ public class Group implements Serializable {
 		this.role = role;
 	}
 
-	@Id
 	@ManyToOne
 	@JoinColumn(name="person_id")
 	public Person getPerson() {
@@ -49,7 +62,6 @@ public class Group implements Serializable {
 		this.person = person;
 	}
 
-	@Id
 	@ManyToOne
 	@JoinColumn(name="project_id")
 	public Project getProject() {

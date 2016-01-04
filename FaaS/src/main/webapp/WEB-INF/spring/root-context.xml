@@ -25,7 +25,7 @@
 		<property name="username" value="user"></property>
 		<property name="password" value="gnogun"></property>
 		<property name="url"
-			value="jdbc:derby://localhost:1527/faas"></property>
+			value="jdbc:derby://localhost:1527/faas;create=true"></property>
 	</bean>
 
 	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> 
