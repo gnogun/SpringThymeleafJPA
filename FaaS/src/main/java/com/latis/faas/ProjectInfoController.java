@@ -37,8 +37,8 @@ public class ProjectInfoController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/ProjectList/{uid}", method = RequestMethod.GET)
-	public ModelAndView getProjectList(@PathVariable String uid, ModelAndView model)
+	@RequestMapping(value = "/ProjectList/", method = RequestMethod.GET)
+	public ModelAndView getProjectList(ModelAndView model)
 	{	
 		Project project1 = new Project("Project1", "과제1");
 		Project project2 = new Project("Project2", "과제2");
