@@ -20,6 +20,7 @@ public class CustomUserDetail implements UserDetails{
 		this.person = person;
 	}
 	
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
@@ -39,7 +40,7 @@ public class CustomUserDetail implements UserDetails{
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return this.person.getName();
+		return this.person.getEmail();
 	}
 
 	@Override
@@ -66,4 +67,16 @@ public class CustomUserDetail implements UserDetails{
 		return true;
 	}
 
+
+	public Person getPerson() {
+		return person;
+	}
+
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+	
+	
 }

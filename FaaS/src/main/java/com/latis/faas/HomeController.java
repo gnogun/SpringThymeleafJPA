@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home() {
 		
 		return "dashboard";
-	}
+	}*/
 	
 //	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 //	

@@ -13,12 +13,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.latis.faas.dtoex.Group;
 import com.latis.faas.dtoex.Person;
 import com.latis.faas.dtoex.Project;
-import com.latis.faas.repositoryex.GroupsRepository;
+import com.latis.faas.repositoryex.GroupRepository;
 import com.latis.faas.repositoryex.PersonRepository;
 import com.latis.faas.repositoryex.ProjectRepository;
+import com.latis.faas.util.JsonBuilder;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml", "file:src/main/webapp/WEB-INF/spring/security-context.xml" })
 public class ProjectTest {
 
 	@Autowired
@@ -28,7 +29,7 @@ public class ProjectTest {
 	private PersonRepository personRepository;
 	
 	@Autowired
-	private GroupsRepository groupRepository;
+	private GroupRepository groupRepository;
 
 	// @Test
 	// public void projectMake(){
@@ -40,11 +41,12 @@ public class ProjectTest {
 	//
 	// }
 
+	
+	
 	@Test
 	public void projectMakeEx() {
 		
-		Person person = new Person("gno", "gnogun@naver.com", "gno");
-		personRepository.save(person);
+		Person person = personRepository.findByEmail("gnogun@naver.com").get(0); 
 		
 		for( int i =0 ; i < 10; i++)
 		{

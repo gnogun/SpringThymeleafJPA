@@ -6,6 +6,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.latis.faas.dao.UserDao;
 import com.latis.faas.dtoex.Person;
@@ -16,9 +17,16 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDao userDao;
 	
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+
+
 	@Override
 	public Person signIn(Person person) {
 		// TODO Auto-generated method stub
+		
+		person.setPassword(passwordEncoder.encode(person.getPassword()));
+		
 		return userDao.signIn(person);
 	}
 

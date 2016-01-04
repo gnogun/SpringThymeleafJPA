@@ -24,6 +24,15 @@ public class Group implements Serializable {
 	private Person person;
 	private Project project;
 	
+	public Group() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Group(Person person, Project project, String role) {
+		this.person = person;
+		this.project = project;
+		this.role = role;
+	}
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,16 +42,6 @@ public class Group implements Serializable {
 
 	public void setIdx(int idx) {
 		this.idx = idx;
-	}
-
-	public Group() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Group(Person person, Project project, String role) {
-		this.person = person;
-		this.project = project;
-		this.role = role;
 	}
 	
 	@Column(name = "role")

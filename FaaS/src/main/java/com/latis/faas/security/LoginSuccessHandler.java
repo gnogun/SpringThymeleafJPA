@@ -1,9 +1,6 @@
 package com.latis.faas.security;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 import com.latis.faas.dtoex.Person;
@@ -30,9 +26,11 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		List<GrantedAuthority> authorities = (List<GrantedAuthority>) auth.getAuthorities();
 		String strAuth = authorities.get(0).getAuthority();
 	    
-		Person person = (Person)auth.getPrincipal();
+		CustomUserDetail userDetail = (CustomUserDetail) auth.getPrincipal();
+		
+		Person person = userDetail.getPerson();
 	    
-		Cookie cookie = new Cookie("userId", auth.getName());
+		Cookie cookie = new Cookie("userInfo", person.toString());
 		cookie.setPath("/");
 		// ���߿� ������Ƽ�� ����
 //		cookie.setDomain("test.com");

@@ -19,6 +19,16 @@ public class UserInfoController {
 	@Autowired
 	private UserService userService;
 	
+	@RequestMapping(value="/login")
+	public String login(){
+		return "/login";
+	}
+	
+	@RequestMapping(value="/signin")
+	public String signin(){
+		return "/signin";
+	}
+	
 	@RequestMapping(value = "/UserInfo/{userId}", method = RequestMethod.GET)
 	public @ResponseBody String getUserInfo(@PathVariable String userId) {
 		Person person = new Person();

@@ -6,11 +6,13 @@
   <body>
     <h1>Login page</h1>
     <form th:action="@{/loginProcess}" method="post">
-      <label for="username">Username</label>:
+      <label for="username">Email</label>:
       <input type="text" id="username" name="username" /> <br />
       <label for="password">Password</label>:
       <input type="password" id="password" name="password" /> <br />
       <input type="submit" value="Log in" />
     </form>
+    
+    <p><a href="#" th:href="@{/signin}">회원 가입</a></p>
   </body>
 </html>

@@ -17,14 +17,14 @@ public class CustomUserDetailService implements UserDetailsService{
 	private PersonRepository repo;
 	
 	@Override
-	public UserDetails loadUserByUsername(String name)
+	public UserDetails loadUserByUsername(String email)
 			throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 		
-		ArrayList<Person> person = (ArrayList<Person>) repo.findByName(name);
+		ArrayList<Person> person = (ArrayList<Person>) repo.findByEmail(email);
 		
 		if(person.size() == 0){
-			throw new UsernameNotFoundException(name);
+			throw new UsernameNotFoundException(email);
 		}
 		
 		return new CustomUserDetail(person.get(0));
