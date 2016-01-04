@@ -7,6 +7,7 @@ import java.lang.String;
 import java.util.List;
 
 public interface PersonRepository extends PagingAndSortingRepository<Person, Integer>{
+	
 	List<Person> findByName(String name);
 	
 }

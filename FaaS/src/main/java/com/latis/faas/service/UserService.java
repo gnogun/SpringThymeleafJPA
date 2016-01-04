@@ -10,4 +10,5 @@ public interface UserService {
 	public Person logIn(String id, String password);
 	public String logOut(String id);
 	public Person getUserInfo(int idx);
+	
 }

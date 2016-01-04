@@ -1,15 +1,21 @@
 package com.latis.faas.service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.latis.faas.dao.UserDao;
 import com.latis.faas.dtoex.Person;
+
 
 public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private UserDao userDao;
-
+	
 	@Override
 	public Person signIn(Person person) {
 		// TODO Auto-generated method stub
@@ -33,7 +39,6 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return userDao.getUserInfo(idx);
 	}
-
-	
+		
 
 }
