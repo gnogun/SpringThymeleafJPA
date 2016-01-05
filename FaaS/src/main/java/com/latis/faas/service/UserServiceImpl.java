@@ -1,10 +1,16 @@
 package com.latis.faas.service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.latis.faas.dao.UserDao;
 import com.latis.faas.dtoex.Person;
+
 
 public class UserServiceImpl implements UserService {
 	
@@ -13,6 +19,7 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
+
 
 	@Override
 	public Person signIn(Person person) {
@@ -40,7 +47,6 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return userDao.getUserInfo(idx);
 	}
-
-	
+		
 
 }
