@@ -49,19 +49,18 @@ public class UserTest {
 	public void insert() {
 
 		Person person = new Person("gno", "gnogun@naver.com", "gno");
-		Person person2 = new Person("gno2", "gnogun@naver.com", "gno2");
+	
 
 		service.signIn(person);
-		service.signIn(person2);
-
+	
 		// repository.save(person);
 
 	}
 
 //	@Test
 	public void selectTest() {
-		System.out.println(repository.findByName("gno").size());
-		System.out.println(repository.findByName("gno").get(0).getName());
+	/*	System.out.println(repository.findByName("gno").size());
+		System.out.println(repository.findByName("gno").get(0).getName());*/
 
 	}
 
