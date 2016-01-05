@@ -54,8 +54,8 @@
 				 --><prop key="hibernate.connection.pool_size">4</prop>
 				<prop key="hibernate.connection.shutdown">true</prop>
 				<prop key="hibernate.show_sql">true</prop> <!-- SQL 출력 -->
-				<prop key="hibernate.hbm2ddl.auto">create</prop> 
 				<!-- 
+				<prop key="hibernate.hbm2ddl.auto">create</prop> 
 				<prop key="hibernate.ddl_auto">auto</prop>
 				 -->
 			</props>
