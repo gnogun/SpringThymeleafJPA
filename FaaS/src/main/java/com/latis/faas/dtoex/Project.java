@@ -73,6 +73,6 @@ public class Project {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "{ 'idx' : '" + idx + "', 'name' : '" + name + "' }";
+		return "{ \"idx\" : \"" + idx + "\", \"name\" : \"" + name + "\" }";
 	}
 }

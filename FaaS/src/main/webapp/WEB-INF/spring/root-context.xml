@@ -9,16 +9,8 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
 	<!-- Data Source -->
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-
-		<property name="driverClass" value="org.mariadb.jdbc.Driver"></property>
-		<property name="username" value="root"></property>
-		<property name="password" value="root@faas"></property>
-		<property name="url" value="jdbc:mariadb://14.63.220.246:7749/latis_test"></property>
-	</bean>
 	
-	<!-- <bean id="dataSource"
+	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 
 		<property name="driverClass" value="org.apache.derby.jdbc.ClientDriver"></property>
@@ -26,7 +18,7 @@
 		<property name="password" value="gnogun"></property>
 		<property name="url"
 			value="jdbc:derby://localhost:1527/faas;create=true"></property>
-	</bean> -->
+	</bean>
 
 	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> 
 		<property name="messageConverters"> <list> <bean class="org.springframework.http.converter.json.GsonHttpMessageConverter" 
